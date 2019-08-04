@@ -23,5 +23,6 @@ python server.py --cuda "device名"
 - [Generator](https://www.dropbox.com/s/sum9a25xqn8ubsu/gen.pt?dl=0)
 - [Encoder](https://www.dropbox.com/s/v1zs7nnkinjh4ik/enc.pt?dl=0)
 - [FaceAnalyzer](https://www.dropbox.com/s/dhw4xe0txj1he6k/cnn.pt?dl=0)
+
 ダウンロードしたモデルは./modelsの中に格納してください
 ---
