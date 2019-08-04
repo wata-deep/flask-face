@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="image" accept="image/png, image/jpeg">
+  <button type="submit">かいせき!</button>
+</form>
+
+{% if images %}
+  {% for image in images %}
+    <div>
+      <img src="images/{{ image["raw"] }}" style="margin-top: 10px; vertical-align: bottom; width: 200px;">
+      <img src="images/{{ image["fake"] }}" style="margin-top: 10px; vertical-align: bottom; width: 200px;">
+      <p>{{ "age: %s" %(image["age"]) }}</p>
+      <p>{{ "gender: %s" %(image["gender"]) }}</p>
+      <p>{{ "race: %s" %(image["race"]) }}</p>
+      <p>{{ "smile: %s" %(image["smile"]) }}</p>
+
+    </div>
+  {% endfor %}
+{% endif %}
+
+{% endblock %}
+
